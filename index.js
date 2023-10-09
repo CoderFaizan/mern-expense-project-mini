@@ -8,7 +8,11 @@ const PORT = process.env.PORT || 3000;
 connectToMongoDB()
 app.use(express.json());
 // Use CORS middleware to allow cross-origin requests
-app.use(cors());
+app.use(cors({
+  origion:[""],
+  methods: ["POST", "DELETE"],
+  credentials: true,
+}));
 // Define a GET route
 app.get("/api/faizan", (req, res) => {
   res.send("Faizan Rauf");
