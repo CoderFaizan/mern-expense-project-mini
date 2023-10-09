@@ -10,9 +10,10 @@ app.use(express.json());
 // Use CORS middleware to allow cross-origin requests
 app.use(cors());
 // Define a GET route
-app.get("/api/hello", (req, res) => {
-  res.send("Hello, World!");
+app.get("/api/faizan", (req, res) => {
+  res.send("Faizan Rauf");
 });
+
 
 app.use(express.static(path.join(__dirname, './client/build')));
 app.get('*', function(req, resp){
